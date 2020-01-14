@@ -8,4 +8,4 @@ jobs:
           name: build
           command: docker run -e keyboard=ergodox_ez -e keymap=castella --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware
       - store_artifacts:
-          path: .build/ergodox_ez_castella.hex
+          path: .build/ergodox_ez_default.hex
