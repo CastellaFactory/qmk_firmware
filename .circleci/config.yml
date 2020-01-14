@@ -1,11 +1,12 @@
 version: 2
 jobs:
   build:
-    machine: true
+    docker:
+      - image: edasque/qmk_firmware
     steps:
       - checkout
       - run:
           name: docker build
-          command: util/docker_build.sh ergodox_ez:castella
+          command: make clean; make keyboard=ergodox_ez keymap=castella
       - store_artifacts:
           path: .build/ergodox_ez_castella.hex
