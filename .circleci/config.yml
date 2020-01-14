@@ -8,4 +8,4 @@ jobs:
           name: docker build
           command: util/docker_build.sh ergodox_ez:castella
       - store_artifacts:
-          path: .build/ergodox_ez_default.hex
+          path: .build/ergodox_ez_castella.hex
