@@ -7,6 +7,6 @@ jobs:
       - checkout
       - run:
           name: docker build
-          command: make clean; make keyboard=ergodox_ez keymap=castella
+          command: docker run -e keyboard=ergodox_ez -e keymap=castella --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware
       - store_artifacts:
           path: .build/ergodox_ez_castella.hex
