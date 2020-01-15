@@ -1,3 +1,4 @@
+#include QMK_KEYBOARD_H
 #include "version.h"
 #include "debug.h"
 #include "action_layer.h"
@@ -31,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              */
     // If it accepts an argument (i.e, is a function), it doesn't need KC_.
     // Otherwise, it needs KC_*
-    [QWERTY] = KEYMAP(  // layer 2 : qwerty
+    [QWERTY] = LAYOUT_ergodox(  // layer 0 : qwerty
             // left hand
             KC_ESC,         KC_1,           KC_2,               KC_3,       KC_4,       KC_5,       MO(FN),
             KC_DELT,        KC_Q,           KC_W,               KC_E,       KC_R,       KC_T,       KC_EQL,
@@ -74,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     // If it accepts an argument (i.e, is a function), it doesn't need KC_.
     // Otherwise, it needs KC_*
-    [DVORAK] = KEYMAP(  // layer 0 : dvorak
+    [DVORAK] = LAYOUT_ergodox(  // layer 1 : dvorak
             // left hand
             KC_ESC,         KC_1,           KC_2,               KC_3,       KC_4,       KC_5,       MO(FN),
             KC_TAB,         KC_QUOT,        KC_COMM,            KC_DOT,     KC_P,       KC_Y,       KC_EQL,
@@ -117,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              */
     // If it accepts an argument (i.e, is a function), it doesn't need KC_.
     // Otherwise, it needs KC_*
-    [COLEMAK] = KEYMAP(  // layer 1 : colemak
+    [COLEMAK] = LAYOUT_ergodox(  // layer 2 : colemak
             // left hand
             KC_ESC,         KC_1,           KC_2,               KC_3,       KC_4,       KC_5,       MO(FN),
             KC_TAB,         KC_Q,           KC_W,               KC_F,       KC_P,       KC_G,       KC_EQL,
@@ -159,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                 `--------------------'       `--------------------'
      */
     // SYMBOLS
-    [FN] = KEYMAP(
+    [FN] = LAYOUT_ergodox(
             // left hand
             RESET,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
             KC_TRNS,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
